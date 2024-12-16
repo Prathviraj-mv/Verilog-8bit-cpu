@@ -1,47 +1,58 @@
-module alu_8bit (
-    input [7:0] a, b,
-    input [2:0] alu_sel,
-    output reg [7:0] alu_out,
-    output reg carry_out
-);
-
+module alu_8bit (a ,b ,alu_sel ,alu_out ,carry_out);
+input [7:0] a, b,
+input [2:0] alu_sel,
+output reg [7:0] alu_out,
+output reg carry_out
+    
 always @(*) begin
     case (alu_sel)
-        3'b000: begin
+        3'b000:
+        begin
             {carry_out, alu_out} = a + b;
         end
-        3'b001: begin
+        3'b001:
+        begin
             {carry_out, alu_out} = a - b;
         end
-        3'b010: begin
+        3'b010:
+        begin
             alu_out = a & b;
             carry_out = 0;
         end
-        3'b011: begin
+        3'b011:
+        begin
             alu_out = a | b;
             carry_out = 0;
         end
-        3'b100: begin
+        3'b100:
+        begin
             alu_out = a ^ b;
             carry_out = 0;
         end
-        3'b101: begin
+        3'b101:
+        begin
             {carry_out, alu_out} = a * b;
         end
-        3'b110: begin
-            if (b != 0) begin
+        3'b110:
+        begin
+            if (b != 0) 
+            begin
                 alu_out = a / b;
                 carry_out = 0;
-            end else begin
+            end 
+            else 
+            begin
                 alu_out = 8'b00000000;
                 carry_out = 1;
             end
         end
-        3'b111: begin
+        3'b111:
+        begin
             alu_out = (a == b) ? 8'b00000001 : 8'b00000000;
             carry_out = 0;
         end
-        default: begin
+        default:
+        begin
             alu_out = 8'b00000000;
             carry_out = 0;
         end
@@ -55,7 +66,8 @@ module control_unit (
     output reg [2:0] alu_sel
 );
 
-always @(*) begin
+always @(*)
+    begin
     case (opcode)
         3'b000: alu_sel = 3'b000;
         3'b001: alu_sel = 3'b001;
