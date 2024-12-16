@@ -61,10 +61,9 @@ end
 
 endmodule
 
-module control_unit (
-    input [2:0] opcode,
-    output reg [2:0] alu_sel
-);
+module control_unit (opcode,alu_sel);
+input [2:0] opcode,
+output reg [2:0] alu_sel
 
 always @(*)
     begin
