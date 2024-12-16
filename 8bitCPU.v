@@ -5,7 +5,8 @@ input [2:0] alu_sel;
 output reg [7:0] alu_out;// reg???????????????what da hell?
 output reg carry_out;
     
-always @(*) begin
+    always @(alu_sel) 
+    begin
     case (alu_sel)
         3'b000://add
         begin
