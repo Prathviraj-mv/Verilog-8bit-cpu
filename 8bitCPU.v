@@ -2,7 +2,7 @@
 module alu_8bit (a ,b ,alu_sel ,alu_out ,carry_out);
 input [7:0] a, b;
 input [2:0] alu_sel;
-output reg [7:0] alu_out;
+output reg [7:0] alu_out;// reg???????????????what da hell?
 output reg carry_out;
     
 always @(*) begin
@@ -65,7 +65,7 @@ endmodule
 //control unit module
 module control_unit (opcode,alu_sel);
 input [2:0] opcode;
-output reg [2:0] alu_sel;
+    output reg [2:0] alu_sel;//reg?????????
 
 always @(*)
     begin
