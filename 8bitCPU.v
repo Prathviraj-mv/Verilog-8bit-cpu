@@ -63,6 +63,11 @@ end
 
 endmodule
 
+
+
+
+
+
 //control unit module
 module control_unit (opcode,alu_sel);
 input [2:0] opcode;
@@ -86,6 +91,10 @@ end
 endmodule
 
 
+
+
+
+
 //intruction rom
 module instruction_memory (
     input wire [7:0] a,          // Operand A (8 bits)
@@ -100,5 +109,33 @@ module instruction_memory (
     assign alu_sel_out = alu_sel;
     assign a_out = a;
     assign b_out = b;
+
+endmodule
+
+
+
+
+
+
+//register for storing past output
+
+module register_module (clk,rst,data_in,data_out);
+  input wire clk;
+  input wire rst;
+  input wire [7:0] alu_out;
+  output reg [7:0] data_out;
+
+
+  always @(clk,rst) 
+  begin
+    if (clk ==1)
+      begin
+        data_out = alu_out;
+    end
+    else if(rst ==1)
+      begin
+        data_out = 8'b00000000;
+    end
+end
 
 endmodule
