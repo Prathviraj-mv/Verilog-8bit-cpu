@@ -6,7 +6,7 @@ module register_module (clk,rst,data_in,data_out);
   output reg [7:0] data_out;
 
 
-always @(posedge clk or posedge rst) 
+  always @(clk,rst) 
   begin
     if (clk ==1)
       begin
