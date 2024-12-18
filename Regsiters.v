@@ -3,7 +3,8 @@ module register_module (clk,rst,data_in,data_out);
   input wire clk;
   input wire rst;
   input wire [7:0] alu_out;
-  output reg [7:0] data_out;
+  output  [7:0] data_out;
+  reg  [7:0] data_out;
 
 
   always @(clk,rst) 
