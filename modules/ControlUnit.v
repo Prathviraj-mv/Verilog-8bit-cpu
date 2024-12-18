@@ -4,7 +4,7 @@ input [2:0] opcode;
 output [2:0] alu_sel;
 reg [2:0] alu_sel;
 
-always @(*)
+    always @(opcode)
     begin
     case (opcode)
         3'b000: alu_sel = 3'b000;//add
