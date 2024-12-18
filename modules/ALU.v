@@ -1,6 +1,7 @@
 // alu module
 module alu_8bit (a ,b ,alu_sel ,alu_out ,carry_out);
-input [7:0] a, b;
+input [7:0] a;
+input b;
 input [2:0] alu_sel;
 output  [7:0] alu_out;
 output carry_out;
