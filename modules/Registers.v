@@ -1,5 +1,5 @@
 
-module register_module (clk,rst,data_in,data_out);
+module register_module (clk,rst,alu_out,data_out);
   input wire clk;
   input wire rst;
   input wire [7:0] alu_out;
