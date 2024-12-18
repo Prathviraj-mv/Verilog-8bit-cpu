@@ -8,7 +8,7 @@ module instruction_memory (a,b,alu_sel,result_out,carry_out,clk,rst,data_in,data
   input wire clk;
   input wire rst;
   input wire [7:0] alu_out;
-  output  [7:0] data_out;
+  output wire [7:0] data_out;
 
   control_unit c1(opcode,alu_sel);
   
