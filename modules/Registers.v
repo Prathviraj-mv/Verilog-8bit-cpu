@@ -6,15 +6,8 @@ module register_module (clk,rst,data_in,data_out);
   output  [7:0] data_out;
   reg  [7:0] data_out;
 
-  initial
-    begin
-      forever
-        clk=0;#10;
-        clk=1;#10;
-    end
-
   
-  always @(clk,rst) 
+  always @(posedge clk or negedge rst) 
   begin
     if (clk ==1)
       begin
