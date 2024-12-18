@@ -126,13 +126,13 @@ module register_module (clk,rst,data_in,data_out);
   output reg [7:0] data_out;
 
 
-  always @(clk,rst) 
+    always @(posedge clk,negedge rst) 
   begin
-    if (clk ==1)
+    if (clk)
       begin
         data_out = alu_out;
     end
-    else if(rst ==1)
+    else if(rst)
       begin
         data_out = 8'b00000000;
     end
