@@ -2,8 +2,10 @@
 module alu_8bit (a ,b ,alu_sel ,alu_out ,carry_out);
 input [7:0] a, b;
 input [2:0] alu_sel;
-output reg [7:0] alu_out;// reg???????????????what da hell?
-output reg carry_out;
+output  [7:0] alu_out;
+output carry_out;
+reg  [7:0] alu_out;
+reg carry_out;
     
     always @(alu_sel) 
     begin
