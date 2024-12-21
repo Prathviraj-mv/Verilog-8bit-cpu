@@ -15,6 +15,9 @@ carry_out =0
 
 # CONTROL unit output
 
+opcode = 4
+alu_sel =4
+
 <p>
   <img width =50% src="images/Screenshot 2024-12-21 215813.png">
 </p>
