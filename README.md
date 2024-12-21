@@ -3,7 +3,7 @@ This project implements an 8-bit Arithmetic Logic Unit (ALU) with a control unit
 
 # ALU output
 <p>
-  <img width =50% src="images/Screenshot 2024-12-21 215813.png">
+  <img width =50% src="images/Screenshot 2024-12-21 221202.png">
 </p>
 
 # CONTROL unit output
