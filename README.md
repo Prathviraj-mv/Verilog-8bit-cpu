@@ -3,12 +3,17 @@ This project implements an 8-bit Arithmetic Logic Unit (ALU) with a control unit
 
 # ALU output
 
-a =6f (decimal 111)
-b =6f (decimal 111)
-alu_Sel = 000 (Addition)
+a =6f (decimal 111)</br>
 
-alu_out =de (decimal 222)
-carry_out =0
+b =6f (decimal 111)</br>
+
+alu_Sel = 000 (Addition)</br>
+
+
+alu_out =de (decimal 222)</br>
+
+carry_out =0</br>
+
 <p>
   <img width =50% src="images/Screenshot 2024-12-21 221202.png">
 </p>
