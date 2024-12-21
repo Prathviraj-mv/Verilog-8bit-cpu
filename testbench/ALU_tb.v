@@ -2,7 +2,7 @@
 
 module alu_8bit_tb;
   reg [7:0]a , b;
-  reg [2,0]alu_sel;
+  reg [2:0]alu_sel;
 
   wire [7:0]alu_out;
   wire carry_out;
