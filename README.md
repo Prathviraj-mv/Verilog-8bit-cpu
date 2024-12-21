@@ -7,5 +7,5 @@ This project implements an 8-bit Arithmetic Logic Unit (ALU) with a control unit
 # CONTROL unit output
 
 <p>
-  <img width =50% src="Screenshot 2024-12-21 215813.png">
+  <img width =50% src="IMAGES/Screenshot 2024-12-21 215813.png">
 </p>
