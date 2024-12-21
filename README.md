@@ -20,8 +20,11 @@ carry_out =0</br>
 
 # CONTROL unit output
 
-opcode = 4
-alu_sel =4
+opcode = 4 </br>
+
+
+alu_sel =4 </br>
+
 
 <p>
   <img width =50% src="images/Screenshot 2024-12-21 215813.png">
