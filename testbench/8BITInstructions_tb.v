@@ -23,10 +23,10 @@ module instruction_memory_tb;
     initial
       begin
 
-        //addition (a + b)
+        //add
         a = 8'b00000101;b = 8'b00000011;opcode = 3'b000;clk =1;rst=0;#20;
           
-        //sub (a-b)
+        //sub
         a = 8'b11001100;b = 8'b10101010;opcode = 3'b001;clk =1;rst=0;#20;
           
         //and
