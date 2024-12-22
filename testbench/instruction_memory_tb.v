@@ -18,7 +18,7 @@ module instruction_memory_tb;
       begin
 
         //add
-        a = 8'b00000101;b = 8'b00000011;opcode = 3'b000;save =1;reset=0;#20;
+        a = 8'b00000101;b = 8'b00000011;opcode = 3'b000;save =0;reset=0;#20;
           
         //sub
         a = 8'b00000101;b = 8'b00000011;opcode = 3'b001;save=1;reset=0;#20;
