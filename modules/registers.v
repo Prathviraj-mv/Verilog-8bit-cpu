@@ -1,8 +1,8 @@
 
 module register_module (save,reset,alu_out,data_out);
-  input wire save;
-  input wire reset;
-  input wire [7:0] alu_out;
+  input save;
+  input  reset;
+  input  [7:0] alu_out;
   output  [7:0] data_out;
   reg  [7:0] data_out;
 
