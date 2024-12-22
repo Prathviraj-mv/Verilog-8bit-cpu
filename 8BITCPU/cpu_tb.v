@@ -1,28 +1,49 @@
+module instruction_memory_tb;
 
-module instruction_memory (a,b,opcode,alu_sel,alu_out,carry_out,save,reset,data_out);
+    reg [7:0] a;
+    reg [7:0] b;
+    reg [2:0] opcode;
+    reg save;
+    reg reset;
 
-  
-  input wire [7:0] a;       // Operand A (8 bits)
-  input wire [7:0] b;       // Operand B (8 bits)
-  input wire [2:0] opcode;    // ALU Operation select signal
-  input wire save; 
-  input wire reset; 
+    wire [7:0] alu_out;
+    wire carry_out;
+    wire [7:0] data_out;
+    wire[2:0] alu_sel;
+    instruction_memory uut (a,b,opcode,alu_sel,alu_out,carry_out,save,reset,data_out);
 
-  output wire [2:0] alu_sel;     
-  output wire[7:0] alu_out;     // Output of ALU 
 
-  output wire [7:0] carry_out ;  // CARRY out values
-  output wire [7:0] data_out;// data stored in the registers
 
-  // control unit instance 
-  control_unit c1(opcode,alu_sel);
+    initial
+      begin
 
-  // arithematic logic instance
-  alu_8bit a1(a ,b ,alu_sel,alu_out,carry_out);
+        //add
+        a = 8'b00000101;b = 8'b00000011;opcode = 3'b000;save =1;reset=0;#20;
+          
+        //sub
+        a = 8'b11001100;b = 8'b10101010;opcode = 3'b001;save =1;reset=0;#20;
+          
+        //and
+        a = 8'b00000101;b = 8'b00000011;opcode = 3'b010;save;reset=0;#20;
+          
+        //or
+        a = 8'b11001100;b = 8'b10101010;opcode = 3'b011;save =1;reset=0;#20;
 
-  //register module for saving the output
-  register_module r1(save,reset,alu_out,data_out);
+        //xor
+        a = 8'b00000101;b = 8'b00000011;opcode = 3'b100;save =1;reset=0;#20; 
+          
+        //mul
+        a = 8'b11001100;b = 8'b10101010;opcode = 3'b101;save =1;reset=0;#20;
 
-    
+        //div  
+        a = 8'b00000101;b = 8'b00000011;opcode = 3'b110;save=1;reset=0;#20;
+          
+        //comp
+        a = 8'b11001100;b = 8'b10101010;opcode = 3'b111;save =1;reset=0;#20;
+
+        
+
+
+    end
 
 endmodule
