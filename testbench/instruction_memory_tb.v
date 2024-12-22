@@ -6,7 +6,7 @@ module instruction_memory_tb;
     reg clk;
     reg rst;
 
-    wire [7:0] result_out;
+    wire [7:0] alu_out;
     wire carry_out;
     wire [7:0] data_out;
     wire[2:0] alu_sel;
