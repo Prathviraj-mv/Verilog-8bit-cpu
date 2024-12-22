@@ -11,11 +11,11 @@ module register_module (clk,rst,alu_out,data_out);
   begin
     if (clk )
       begin
-        data_out = alu_out;
+        data_out <= alu_out;
     end
     else if(rst)
       begin
-        data_out = 8'b00000000;
+        data_out <= 8'b00000000;
     end
 end
 
