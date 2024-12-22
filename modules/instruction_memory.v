@@ -17,7 +17,7 @@ module instruction_memory (a,b,opcode,alu_sel,result_out,carry_out,clk,rst,data_
   control_unit c1(opcode,alu_sel);
 
   // arithematic logic instance
-  alu_8bit a1(a ,b ,alu_sel,result_out,carry_out);
+  alu_8bit a1(a ,b ,alu_sel,alu_out,carry_out);
 
   //register module for saving the output
   register_module r1(clk,rst,alu_out,data_out);
