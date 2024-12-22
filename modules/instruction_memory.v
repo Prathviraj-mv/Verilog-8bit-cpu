@@ -8,8 +8,8 @@ module instruction_memory (a,b,opcode,alu_sel,result_out,carry_out,clk,rst,data_
   input wire clk; //clock pulse for the registers
   input wire rst; // reset for the registers
 
-  output wire [2:0] alu_sel;     // Output of ALU //results
-  output wire [7:0] result_out;     // Output of ALU //results
+  output wire [2:0] alu_sel;     
+  output wire [7:0] alu_out;     // Output of ALU //results
   output wire [7:0] carry_out ;  // CARRY out values
   output wire [7:0] data_out;// data stored in the registers
 
