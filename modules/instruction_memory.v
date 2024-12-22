@@ -1,5 +1,5 @@
 
-module instruction_memory (a,b,opcode,alu_sel,result_out,carry_out,clk,rst,data_out);
+module instruction_memory (a,b,opcode,alu_sel,alu_out,carry_out,clk,rst,data_out);
 
   
   input wire [7:0] a;       // Operand A (8 bits)
