@@ -1,8 +1,8 @@
 // control unit test bench
 
-module control_unit_tb(opcode,alu_sel);
-   reg [2:0]opcode;
-   wire [2:0]alu_sel;
+module control_unit_tb;
+   reg [2:0] opcode;
+   wire [2:0] alu_sel;
 
   control_unit  uut(opcode,alu_sel);
       initial
