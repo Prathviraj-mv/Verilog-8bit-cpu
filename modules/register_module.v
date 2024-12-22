@@ -11,15 +11,15 @@ module register_module (save,reset,alu_out,data_out);
   begin
     if (save ==1)
       begin
-        data_out <= alu_out;
+        data_out = alu_out;
       end
     else if(reset ==1)
       begin
-        data_out <= 8'b00000000;
+        data_out = 8'b00000000;
       end
     else
       begin
-        data_out <= 8'b00000000;
+        data_out = 8'b00000000;
       end    
 end
 
