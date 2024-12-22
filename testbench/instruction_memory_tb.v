@@ -24,7 +24,7 @@ module instruction_memory_tb;
         a = 8'b11001100;b = 8'b10101010;opcode = 3'b001;save =1;reset=0;#20;
           
         //and
-        a = 8'b00000101;b = 8'b00000011;opcode = 3'b010;save;reset=0;#20;
+        a = 8'b00000101;b = 8'b00000011;opcode = 3'b010;save=1;reset=0;#20;
           
         //or
         a = 8'b11001100;b = 8'b10101010;opcode = 3'b011;save =1;reset=0;#20;
