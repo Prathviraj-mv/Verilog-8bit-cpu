@@ -7,7 +7,7 @@ module register_module (clk,rst,alu_out,data_out);
   reg  [7:0] data_out;
 
   
-  always @(clk,rst) 
+  always @(posedge clk or negedge rst) 
   begin
     if (clk ==1)
       begin
