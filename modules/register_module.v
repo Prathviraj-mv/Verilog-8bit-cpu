@@ -7,13 +7,13 @@ module register_module (clk,rst,alu_out,data_out);
   reg  [7:0] data_out;
 
   
-  always @(posedge clk or rst) 
+  always @(posedge clk or posedge rst) 
   begin
-    if (clk ==1)
+    if (clk )
       begin
         data_out = alu_out;
     end
-    else if(rst ==1)
+    else if(rst)
       begin
         data_out = 8'b00000000;
     end
