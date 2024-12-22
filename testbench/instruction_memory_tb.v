@@ -10,7 +10,7 @@ module instruction_memory_tb;
     wire carry_out;
     wire [7:0] data_out;
     wire[2:0] alu_sel;
-    instruction_memory uut (a,b,opcode,alu_sel,result_out,carry_out,clk,rst,data_out);
+    instruction_memory uut (a,b,opcode,alu_sel,alu_out,carry_out,clk,rst,data_out);
 
     // Clock generation
     initial 
