@@ -7,20 +7,22 @@ module register_module (save,reset,alu_out,data_out);
   reg  [7:0] data_out;
 
   
-  always @(save, reset) 
+  always @(save or reset) 
+
   begin
-    if (save ==1 & reset =0)
+    data_out = 8'd0;
+    if (reset)
       begin
-        data_out = alu_out;
+        data_out = 8'd0;
       end
-    else if(reset ==1 & save =0)
+    else if(save)
       begin
-        data_out = 8'b00000000;
+        data_out <=alu_out;
       end
     else
       begin
         data_out = 8'b00000000;
-      end    
+      end     
 end
 
 endmodule
