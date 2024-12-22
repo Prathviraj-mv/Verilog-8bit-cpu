@@ -9,11 +9,11 @@ module register_module (save,reset,alu_out,data_out);
   
   always @(save, reset) 
   begin
-    if (save ==1)
+    if (save ==1 & reset =0)
       begin
         data_out = alu_out;
       end
-    else if(reset ==1)
+    else if(reset ==1 & save =0)
       begin
         data_out = 8'b00000000;
       end
