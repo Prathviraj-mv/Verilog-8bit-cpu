@@ -141,9 +141,11 @@ module register_module (clk,reset,alu_out,data_out);
   begin
     data_out =8'd0;
   end
-  always @(posedge clk, reset) 
+
+  
+  always @(posedge clk) 
   begin
-    if (clk == 1) //save the value
+    if (reset ==0) //save the value
       begin
         data_out = alu_out;
       end
