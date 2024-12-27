@@ -15,8 +15,10 @@ module instruction_memory_tb;
     instruction_memory uut (a,b,opcode,alu_sel,alu_out,carry_out,clk,reset,data_out);
     initial 
         begin forever
-            clk =0;#10;
-            clk =~clk;#10;
+            begin
+            clk =0;#20;
+            clk =~clk;#20;
+            end
         end   
 
 
