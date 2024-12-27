@@ -5,7 +5,7 @@ module instruction_memory (a,b,opcode,alu_sel,alu_out,carry_out,clk,reset,data_o
   input wire [7:0] a;          // Operand A (8 bits)
   input wire [7:0] b;          // Operand B (8 bits)
   input wire [2:0] opcode;     // ALU Operation select signal
-  input wire save; 
+  input wire clk; 
   input wire reset; 
   
   output wire [2:0] alu_sel;     
