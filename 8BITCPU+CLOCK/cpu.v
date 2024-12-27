@@ -20,7 +20,7 @@ module instruction_memory (a,b,opcode,alu_sel,alu_out,carry_out,save,reset,data_
   alu_8bit a1(a ,b ,alu_sel,alu_out,carry_out);
   
   //register module for saving the output
-  register_module r1(save,reset,alu_out,data_out);
+  register_module r1(clk,reset,alu_out,data_out);
   
 endmodule
 
@@ -128,19 +128,22 @@ endmodule
 
 //register module
 
-module register_module (save,reset,alu_out,data_out);
+module register_module (clk,reset,alu_out,data_out);
   
-  input wire save;
+  input wire clk;
   input wire reset;
   input wire [7:0] alu_out;
   
   output  [7:0] data_out;
   reg  [7:0] data_out;
 
-  
-  always @(save, reset) 
+  initial
   begin
-    if (save ==1) //save the value
+    data_out =8'd0;
+  end
+  always @(posedge clk, reset) 
+  begin
+    if (clk == 1) //save the value
       begin
         data_out = alu_out;
       end
