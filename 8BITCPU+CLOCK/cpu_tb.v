@@ -3,7 +3,7 @@ module instruction_memory_tb;
     reg [7:0] a;
     reg [7:0] b;
     reg [2:0] opcode;
-    reg save;
+    reg clk;
     reg reset;
 
     wire [7:0] alu_out;
@@ -12,7 +12,7 @@ module instruction_memory_tb;
     wire[2:0] alu_sel;
 
     
-    instruction_memory uut (a,b,opcode,alu_sel,alu_out,carry_out,save,reset,data_out);
+    instruction_memory uut (a,b,opcode,alu_sel,alu_out,carry_out,clk,reset,data_out);
 
 
 
