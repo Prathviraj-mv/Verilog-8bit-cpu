@@ -16,8 +16,8 @@ module instruction_memory_tb;
     initial 
         begin forever
             begin
-            clk =0;#20;
-            clk =~clk;#20;
+            clk =0;#10;
+            clk =~clk;#10;
             end
         end   
 
